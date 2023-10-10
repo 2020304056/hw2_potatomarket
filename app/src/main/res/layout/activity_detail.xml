@@ -7,7 +7,6 @@
     android:id="@+id/constLayout"
     tools:context=".DetailActivity">
 
-    <!-- A ScrollView to allow scrolling if content overflows -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -16,12 +15,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <!-- A ConstraintLayout to organize content within the ScrollView -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <!-- Image to display the item's image -->
             <ImageView
                 android:id="@+id/iv_itemImage"
                 android:layout_width="match_parent"
@@ -32,7 +29,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <!-- Seller information section -->
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cl_sellerInfo"
                 android:layout_width="match_parent"
@@ -41,7 +38,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/iv_itemImage">
 
-                <!-- Seller's profile image -->
                 <ImageView
                     android:id="@+id/iv_face"
                     android:layout_width="50dp"
@@ -52,7 +48,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <!-- Seller's name -->
                 <TextView
                     android:id="@+id/tv_sellerName"
                     android:layout_width="wrap_content"
@@ -65,7 +60,6 @@
                     app:layout_constraintStart_toEndOf="@+id/iv_face"
                     app:layout_constraintTop_toTopOf="@+id/iv_face" />
 
-                <!-- Seller's address -->
                 <TextView
                     android:id="@+id/tv_sellerAddress"
                     android:layout_width="wrap_content"
@@ -79,7 +73,6 @@
                     app:layout_constraintStart_toEndOf="@+id/iv_face"
                     app:layout_constraintTop_toBottomOf="@+id/tv_sellerName" />
 
-                <!-- Manner temperature -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -92,7 +85,6 @@
                     app:layout_constraintEnd_toStartOf="@+id/iv_face2"
                     app:layout_constraintTop_toTopOf="@+id/iv_face2" />
 
-                <!-- Seller's face icon (second image) -->
                 <ImageView
                     android:id="@+id/iv_face2"
                     android:layout_width="30dp"
@@ -102,7 +94,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/tv_sellerName" />
 
-                <!-- Manner temperature description -->
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -115,7 +107,6 @@
                     app:layout_constraintTop_toBottomOf="@+id/iv_face2" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <!-- Divider line -->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -124,7 +115,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cl_sellerInfo" />
 
-            <!-- Item title -->
             <TextView
                 android:id="@+id/tv_iTemTitle"
                 android:layout_width="0dp"
@@ -140,7 +130,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cl_sellerInfo" />
 
-            <!-- Item details -->
             <TextView
                 android:id="@+id/tv_iTemDetail"
                 android:layout_width="0dp"
@@ -154,10 +143,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_iTemTitle" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
-    <!-- Back button -->
+
     <ImageView
         android:id="@+id/iv_back"
         android:layout_width="30dp"
@@ -168,7 +158,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Bottom information section -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_btmInfo"
         android:layout_width="match_parent"
@@ -178,7 +167,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <!-- Like button (heart icon) -->
         <LinearLayout
             android:id="@+id/ll_detail_like"
             android:layout_width="wrap_content"
@@ -197,7 +185,6 @@
                 android:src="@drawable/img_like"/>
         </LinearLayout>
 
-        <!-- Vertical divider line -->
         <View
             android:id="@+id/view"
             android:layout_width="1dp"
@@ -209,7 +196,6 @@
             app:layout_constraintStart_toEndOf="@+id/ll_detail_like"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- Item price -->
         <TextView
             android:id="@+id/tv_iTemDetailPrice"
             android:layout_width="0dp"
@@ -223,7 +209,6 @@
             app:layout_constraintStart_toEndOf="@+id/view"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- Chat button -->
         <TextView
             android:layout_width="100dp"
             android:layout_height="35dp"
@@ -237,5 +222,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
